@@ -42,5 +42,5 @@ Para simular o ciclo de vida de um produto de software no mercado de trabalho, o
 ## Como Executar a Versão atual (V1)
 Certifique-se de estar com o terminal aberto na raiz do projeto e execute:
 ```bash
-python3 "Versão 1/calculadora_v1.py"
+python3 "Versao_1/calculadora_v1.py"
 ```
