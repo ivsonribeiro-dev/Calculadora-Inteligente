@@ -1,1 +1,6 @@
+# banco de dados locais
 *.db
+
+# Pastas tempórarias ou em desenvolvimento
+src/
+Scripts Auxiliares/
