@@ -22,15 +22,15 @@ Para simular o ciclo de vida de um produto de software no mercado de trabalho, o
 ### [CONCLUÍDO] Script Auxiliar Integrado: Equações e Bhaskara
 * **Descrição:** Acoplamento de um resolvedor avançado de equações de primeiro e segundo grau. Sendo capaz de tratar raízes complexas no conjunto dos números imaginários (`cmath`) e renderizar dízimas e dízimas periódicas no formato estético de frações reais através de caracteres sobrescritos e subscritos personalizados (`fractions`).
 
-### [EM DESENVOLVIMENTO] Refatoração Arquitetural e Modularização (`src/`)
-* **Status:** Estrutura de diretórios criada; Iniciando a separação das funções em módulos independentes (`utils.py`, `banco.py`, `funcoes.py` e `main.py`).
-* **Descrição:** Desmonte do arquivo monolítico de mais de 500 linhas da Versão 2 para adoção do **Princípio da Responsabilidade única (SOLID)**. O código será fatiado em módulos limpos de baixa dependência:
-  * `main.py`: Orquestração de entrada, rotas e menus (menos de 50 linhas).
+### [CONCLUÍDO] Refatoração Arquitetural e Modularização (`src/`)
+* **Descrição:** Desmonte do arquivo monolítico de mais de 600 linhas da Versão 2 para adoção do **Princípio da Responsabilidade única (SOLID)**. O código foi fatiado em módulos limpos de baixa dependência:
+  * `main.py`: Orquestração de entrada, rotas e menus (menos de 400 linhas).
   * `banco.py`: Encapsulamento completo de conexões, queries SQL e transações em banco.
   * `funcoes.py`: Isolamento puro das regras de cálculo aritmético e Bhaskara.
   * `utils.py`: Abstração de ferramentas visuais, limpeza nativa de tela (`subprocess.run`) e tratamento de strings.
 
-### [PLANEJADO] Versão 3: Integração com APIs web
+### [PLANEJADO] Versão 3 (`Versao_3/`): Integração Web e Consumo de APIs web
+* **Status:** Aguardando início da implementação; arquitetura modular (src/) já concluída e preparada para receber os endpoints.
 * **Descrição:** Evolução para consumo de microsserviços online utilizando requisições HTTP (`requests`). Integração com a *AwesomeAPI* para conversão de moedas mundiais (Real, Dólar, Euro, Bitcoin) em tempo real, gravando o histórico de cotações diretamente no banco de dados.
 
 ## Tecnologias e Recursos Globais do Projeto
@@ -39,8 +39,8 @@ Para simular o ciclo de vida de um produto de software no mercado de trabalho, o
 * **Módulos Nativos:** `os`, `sys`, `subprocess`, `time`, `cmath`, `datetime`, `fractions`
 * **Gerenciamento de Pacotes:** `pip` e isolamento de dependências via `requirements.txt`
 
-## Como Executar a Versão atual (V1)
+## Como Executar a Versão atual (src/)
 Certifique-se de estar com o terminal aberto na raiz do projeto e execute:
 ```bash
-python3 "Versao_1/calculadora_v1.py"
+python3 "src/main.py"
 ```
