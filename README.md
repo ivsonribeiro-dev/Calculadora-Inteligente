@@ -44,3 +44,14 @@ Certifique-se de estar com o terminal aberto na raiz do projeto e execute:
 ```bash
 python3 "src/main.py"
 ```
+
+## Testes Automatizados (`tests/`)
+O projeto conta com uma suíte de testes unitários construída com a biblioteca nativa `unittest` e `unittest.mock`, garantindo a integridade matemática e o isolamento do banco de dados:
+* **`tests/test_utils.py`:** Valida formatações númericas, parênteses de sinais e conversão para frações Unicode.
+* **`tests/test_funcoes.py`:** Testa equações do 1° e 2° grau (incluindo raízes complexas) isolando o banco via *mock*.
+* **`tests/test_banco.py`:** Verifica criação de tabelas, gravação, consulta e limpeza de históricos em banco temporário isolado.
+
+### Como executar os testes:
+```bash
+python3 -m unittest discover -s tests -t . -v
+```
